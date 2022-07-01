@@ -1,5 +1,5 @@
 import { ServerStyleSheet } from 'styled-components'
-import Document, { DocumentContext, DocumentInitialProps, Html, Head, Main, NextScript } from '../../node_modules/next/document'
+import Document, { DocumentContext, DocumentInitialProps, Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {

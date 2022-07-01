@@ -10,7 +10,8 @@ const theme = {
         detail: "#98C1D9",
         title: "#98C1D9",
         primary: '#3D5A80',
-        red: "#EE6C4D"
+        red: "#EE6C4D",
+        emphasis: "#95F9FD"
     }
 }
 

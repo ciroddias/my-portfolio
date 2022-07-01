@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Head from '../../node_modules/next/head'
-import Link from '../../node_modules/next/link'
+import Head from 'next/head'
+import Link from 'next/link'
 
 import MyPortfolioLogo from '../assets/myPortfolio.svg'
 import Asset from '../components/Asset/index'
@@ -19,11 +19,10 @@ const Home: React.FC = () => {
     const [stockAmount, setStockAmount] = useState(0)
 
     useEffect(() => {
-        setAssets()
+        // setAssets()
     }, [])
     const setUIValues = () => {
         assets.map(asset => {
-            console.log(asset)
             // set fiis quantity
             if (asset.type === "fii") {
                 const updated = fiisQuantity+1

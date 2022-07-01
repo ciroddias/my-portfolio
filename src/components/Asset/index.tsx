@@ -1,4 +1,4 @@
-import Link from "../../../node_modules/next/link";
+import Link from "next/link";
 import { AssetHeader, Container } from "./styles";
 
 export default function Asset({type, quantity, value}) {
