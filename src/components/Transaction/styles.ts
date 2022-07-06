@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     margin: 2rem 0;
     transition: padding 1s ease-out ;
+    cursor: pointer;
 
     :first-child {
         margin-top: 0;

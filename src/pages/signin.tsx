@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler} from 'react-hook-form';
 import Input from '../components/Input';
-import { Form } from '../styles/pages/signin';
+import { Container, Form, FormWrapper } from '../styles/pages/signin';
+import { } from "react-icons/fi";
 
 interface ISignInData {
     email: string,
@@ -12,13 +13,23 @@ export default function SignIn() {
     const onSubmit: SubmitHandler<ISignInData> = data => console.log(data)
 
     return(
-        <Form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Seja bem vindo!</h1>
-            <Input type='email' placeholder='Email' {...register("email", {required: true})} />
-            {errors.password && <span>This field is required</span>}
-            <Input type='password' placeholder='senha' {...register("password", {required: true})}/>
-            {errors.password && <span>This field is required</span>}
-            <Input type='submit' />
-        </Form>
+        <Container>
+            <FormWrapper>
+                <h1>Seja bem vindo!</h1>
+                <Form onSubmit={handleSubmit(onSubmit)}>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <Input id="email" type='email' {...register("email", {required: true})} />
+                    </div>
+
+                    <div>
+                        <label htmlFor="password">Senha</label>
+                        <Input id="password" type='password' {...register("password", {required: true})}/>
+                    </div>
+
+                    <Input type='submit' id="submit" />
+                </Form>
+            </FormWrapper>
+        </Container>
     )
 }

@@ -1,8 +1,8 @@
 const axios = require('axios').default;
 
-async function fetchUserData() {
+async function signin() {
     try {
-        const response = await axios.get('/fetchData')
+        const response = await axios.get('/sessions')
         return response
     } catch (error) {
         return {status: false, message: error.message};

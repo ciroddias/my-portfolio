@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import MyPortfolioLogo from '../assets/myPortfolio.svg'
 import Asset from '../components/Asset/index'
 import Layout from '../components/Layout/index'
 import Patrimony from '../components/Patrimony/index'
@@ -21,22 +20,6 @@ const Home: React.FC = () => {
     useEffect(() => {
         // setAssets()
     }, [])
-    const setUIValues = () => {
-        assets.map(asset => {
-            // set fiis quantity
-            if (asset.type === "fii") {
-                const updated = fiisQuantity+1
-                setFiisQuantity(updated)
-            }
-            // set stock quantity
-            if (asset.type === "stock") {
-                const updated = stockQuantity+1
-                setFiisQuantity(updated)
-            }
-            // set fiis amount
-            // set stock amount
-        })
-    }
 
     return (
         <div>
@@ -51,46 +34,48 @@ const Home: React.FC = () => {
             <Content>
                 <Section title={"Ativos"} total={assets.length}>
                     <Asset
-                        type={"Fundos Imobiliários"}
-                        quantity={fiisQuantity}
-                        value={formatter.format(fiisAmount)}
+                            type={"Fundos Imobiliários"}
+                            quantity={fiisQuantity}
+                            value={formatter.format(fiisAmount)}
+                            href={""}
                     />
                     <Asset
-                        type={"Ações"}
-                        quantity={stockQuantity}
-                        value={formatter.format(stockAmount)}
+                            type={"Ações"}
+                            quantity={stockQuantity}
+                            value={formatter.format(stockAmount)}
+                            href={""}
                     />
                 </Section>
                 <Section title={"Movimentações"}>
                     <Transaction
-                        date={"10/10/22"}
-                        ticker={"FUND11"}
-                        quantity={4}
-                        total={660}
-                        value={165}
+                            date={"10/10/22"}
+                            ticker={"FUND11"}
+                            quantity={4}
+                            total={660}
+                            value={165}
+                            href={""}
                     />
                     <Transaction
-                        date={"10/10/22"}
-                        ticker={"FUND11"}
-                        quantity={5}
-                        total={655}
-                        value={131}
+                            date={"10/10/22"}
+                            ticker={"FUND11"}
+                            quantity={5}
+                            total={655}
+                            value={131}
+                            href={""}
                     />
                     <Transaction
-                        date={"10/10/22"}
-                        ticker={"ACAO3"}
-                        quantity={25}
-                        total={661.50}
-                        value={26.46}
+                            date={"10/10/22"}
+                            ticker={"ACAO3"}
+                            quantity={25}
+                            total={661.50}
+                            value={26.46}
+                            href={""}
                     />
                     <Link href={''}>ver mais</Link>
-                    {/* ver mais: grow on hover */}
                 </Section>
                 <Section title='Rentabilidade'>
-                    {/* últimos 10 anos, últimos 5 anos, último ano, últimos 6 e 3 meses e último mês */}
                 </Section>
                 <Section title='Proventos'>
-                    {/* último mês, mês atual */}
                 </Section>
 
             </Content>

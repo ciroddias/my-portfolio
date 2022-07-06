@@ -5,6 +5,7 @@ export const Container = styled.div`
     margin: 1.5rem 0;
     text-align: left;
     transition: padding 1s ease-out ;
+    cursor: pointer;
 
     :first-child {
         margin-top: 0;
